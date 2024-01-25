@@ -7,7 +7,8 @@ let isRunning = false;
 // const audio = document.getElementById('audio');
 // const musicTimeThreshold = 5;
 
-let alarmSound = new Audio('sampleAudio.mp3');
+let alarmSound = new Audio('sample-file-3.mp3');
+alarmSound.loop = true;
 
 function updateTimerDisplay() {
   const timerDisplay = document.getElementById('timer');
