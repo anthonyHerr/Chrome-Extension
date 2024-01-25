@@ -4,9 +4,18 @@
     "description": "A simple timer that keeps you focused for small, easy stints.",
     "version": "1.0",
     "action": {
-      "default_popup": "popup.html",
-      "default_icon": "timer.png"
-    }
+        "default_popup": "popup.html",
+        "default_icon": {
+          "16": "timer.png",
+          "48": "timer.png",
+          "128": "timer.png"
+        }
+      },
+      "icons": {
+        "16": "timer.png",
+        "48": "timer.png",
+        "128": "timer.png"
+      }
   }
     
   
