@@ -42,5 +42,11 @@ body {
     cursor: pointer;
     filter: brightness(150%);
   }
+  #stopButton{
+    background-color: rgb(155, 55, 55);
+  }
+  #resetButton{
+    background-color: rgb(81, 106, 183);
+  }
   
   

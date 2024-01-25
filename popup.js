@@ -17,6 +17,10 @@ function updateTimerDisplay() {
 
 function startTimer() {
   isRunning = true;
+
+  alarmSound.pause();
+  alarmSound.currentTime = 0;
+
   timer = setInterval(function () {
     if (minutes === 0 && seconds === 0) {
       clearInterval(timer);
@@ -27,6 +31,7 @@ function startTimer() {
       let timeAdded = prompt('Please type how many MINUTES to add and press ENTER')
        minutes += timeAdded;
        updateTimerDisplay();
+       startTimer()
     } else {
       if (seconds === 0) {
         minutes--;
@@ -43,9 +48,12 @@ function resetTimer() {
     minutes = 0;
     seconds = 0;
 let resetAdded = prompt('Please type how many MINUTES to add and press ENTER')
+alarmSound.pause();
+  alarmSound.currentTime = 0;
   minutes = resetAdded;
   isRunning = false;
   updateTimerDisplay();
+  startTimer()
 }
 
 function stopTimer() {
