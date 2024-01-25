@@ -1,10 +1,23 @@
 {
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "manifest_version": 2,
+    "name": "Focus Timer",
     "version": "1.0",
-    "manifest_version": 3,
-    "action": {
-      "default_popup": "hello.html",
-      "default_icon": "hello_extensions.png"
+    "description": "A simple focus timer Chrome extension",
+    "permissions": ["activeTab"],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.jpg",
+        "48": "images/icon48.jpg",
+        "128": "images/icon128.jpg"
+      }
+    },
+    "icons": {
+      "16": "images/icon16.jpg",//This is used for the icon displayed in the browser's address bar (favicon) and in the extensions toolbar. It's a small icon that represents your extension.
+
+      "48": "images/icon48.jpg",// This icon size is used in the extensions management page (chrome://extensions/) and in the Chrome Web Store. It provides a larger and more detailed representation of your extension.
+
+      "128": "images/icon128.jpg"//This larger icon is used for installation prompts and in the Chrome Web Store. It is also used when the extension is pinned to the Chrome taskbar or when viewed in the Extensions page with more details.
     }
   }
+  
