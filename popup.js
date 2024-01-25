@@ -29,7 +29,13 @@ function startTimer() {
       // You can add a notification or any other action when the timer completes.
       confirm("GREAT JOB! TIME TO TAKE A BREAK.");
       let timeAdded = prompt('Please type how many MINUTES to add and press ENTER')
-       minutes += timeAdded;
+      let parsedInput = parseInt(timeAdded, 10);
+if (!isNaN(parsedInput)) {
+  minutes += parsedInput;
+} else {
+  // Handle invalid input (non-numeric)
+  alert('Invalid input. Please enter a valid number.');
+}
        updateTimerDisplay();
        startTimer()
     } else {
@@ -50,8 +56,15 @@ function resetTimer() {
 let resetAdded = prompt('Please type how many MINUTES to add and press ENTER')
 alarmSound.pause();
   alarmSound.currentTime = 0;
-  minutes = resetAdded;
+let parsedInput = parseInt(resetAdded, 10);
+if (!isNaN(parsedInput)) {
+  minutes += parsedInput;
+} else {
+  // Handle invalid input (non-numeric)
+  alert('Invalid input. Please enter a valid number.');
+}
   isRunning = false;
+  clearInterval(timer)
   updateTimerDisplay();
   startTimer()
 }
