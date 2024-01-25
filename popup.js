@@ -1,7 +1,8 @@
 let timer;
-let minutes = 25;
-let seconds = 0;
+let minutes = 0;
+let seconds = 5;
 let isRunning = false;
+
 
 function updateTimerDisplay() {
   const timerDisplay = document.getElementById('timer');
@@ -15,6 +16,7 @@ function startTimer() {
       clearInterval(timer);
       isRunning = false;
       // You can add a notification or any other action when the timer completes.
+      confirm("Time to take a break");
     } else {
       if (seconds === 0) {
         minutes--;
@@ -29,17 +31,28 @@ function startTimer() {
 
 function resetTimer() {
   clearInterval(timer);
-  minutes = 25;
+  minutes = 1;
   seconds = 0;
   isRunning = false;
   updateTimerDisplay();
 }
+
+function stopTimer() {
+    clearInterval(timer);
+    isRunning = false;
+    updateTimerDisplay();
+  }
 
 document.getElementById('startButton').addEventListener('click', function () {
   if (!isRunning) {
     startTimer();
   }
 });
+document.getElementById('stopButton').addEventListener('click', function () {
+    if (isRunning) {
+      stopTimer();
+    }
+  });
 
 document.getElementById('resetButton').addEventListener('click', function () {
   resetTimer();

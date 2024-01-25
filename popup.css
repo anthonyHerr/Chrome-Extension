@@ -1,20 +1,46 @@
-style.css
+*{
+    font-family: Product Sans, sans-serif; 
+}
 body {
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 100px;
     margin: 0;
-    padding: 20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #2a2b2e;
+    border: 3px white;
   }
   
   #timer {
-    font-size: 24px;
+    font-size: 35px;
     margin-bottom: 10px;
+    color: white;
   }
   
-  button {
-    margin: 5px;
+  .button-container {
+    display: flex;
   }
+  
+  .buttons {
+    margin: 5px;
+    background-color: rgb(8, 168, 115);
+    border-radius: 50%; /* Use 50% for a perfect circle */
+    color: white;
+    border: 1px solid transparent;
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex: 1; /* Distribute available space equally among buttons */
+  }
+
+  .buttons:hover{
+    cursor: pointer;
+    filter: brightness(150%);
+  }
+  
   

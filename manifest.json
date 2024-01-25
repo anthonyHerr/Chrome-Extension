@@ -1,21 +1,13 @@
 {
     "manifest_version": 3,
-    "name": "Focus Timer",
+    "name": "Pomodoro Timer",
+    "description": "A simple timer that keeps you focused for small, easy stints.",
     "version": "1.0",
-    "description": "A simple focus timer Chrome extension",
-    "permissions": ["activeTab"],
     "action": {
       "default_popup": "popup.html",
-      "default_icon": {
-        "16": "images/icon16.jpg",
-        "48": "images/icon48.jpg",
-        "128": "images/icon128.jpg"
-      }
-    },
-    "icons": {
-      "16": "images/icon16.jpg",
-      "48": "images/icon48.jpg",
-      "128": "images/icon128.jpg"
+      "default_icon": "hello_extensions.png"
     }
   }
+    
+  
   
