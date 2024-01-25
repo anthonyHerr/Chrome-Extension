@@ -1,6 +1,6 @@
 let timer;
-let minutes = 0;
-let seconds = 5;
+let minutes = 25;
+let seconds = 0;
 let memory = 0;
 let isRunning = false;
 //https://samples-files.com/samples/Audio/mp3/sample-file-3.mp3
@@ -29,8 +29,10 @@ function startTimer() {
       // You can add a notification or any other action when the timer completes.
       confirm("GREAT JOB! TIME TO TAKE A BREAK.");
       let timeAdded = prompt('Please type how many MINUTES to add and press ENTER')
-      let parsedInput = parseInt(timeAdded, 10);
-if (!isNaN(parsedInput)) {
+      let parsedInput = parseInt(timeAdded, 10)
+      if(timeAdded === null){
+        window.close()
+      }else if (!isNaN(parsedInput)) {
   minutes += parsedInput;
 } else {
   // Handle invalid input (non-numeric)
