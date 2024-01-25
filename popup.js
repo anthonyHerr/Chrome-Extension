@@ -1,8 +1,13 @@
 let timer;
 let minutes = 0;
 let seconds = 5;
+let memory = 0;
 let isRunning = false;
+//https://samples-files.com/samples/Audio/mp3/sample-file-3.mp3
+// const audio = document.getElementById('audio');
+// const musicTimeThreshold = 5;
 
+let alarmSound = new Audio('sampleAudio.mp3');
 
 function updateTimerDisplay() {
   const timerDisplay = document.getElementById('timer');
@@ -15,8 +20,12 @@ function startTimer() {
     if (minutes === 0 && seconds === 0) {
       clearInterval(timer);
       isRunning = false;
+      alarmSound.play();
       // You can add a notification or any other action when the timer completes.
-      confirm("Time to take a break");
+      confirm("GREAT JOB! TIME TO TAKE A BREAK.");
+      let timeAdded = prompt('Please type how many MINUTES to add and press ENTER')
+       minutes += timeAdded;
+       updateTimerDisplay();
     } else {
       if (seconds === 0) {
         minutes--;
@@ -30,9 +39,10 @@ function startTimer() {
 }
 
 function resetTimer() {
-  clearInterval(timer);
-  minutes = 1;
-  seconds = 0;
+    minutes = 0;
+    seconds = 0;
+let resetAdded = prompt('Please type how many MINUTES to add and press ENTER')
+  minutes = resetAdded;
   isRunning = false;
   updateTimerDisplay();
 }

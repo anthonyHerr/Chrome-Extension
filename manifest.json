@@ -15,7 +15,13 @@
         "16": "timer.png",
         "48": "timer.png",
         "128": "timer.png"
-      }
+      },
+      "web_accessible_resources": [
+        {
+          "resources": ["asampleAudio.mp3"],
+          "matches": ["<all_urls>"]
+        }
+      ]
   }
     
   
